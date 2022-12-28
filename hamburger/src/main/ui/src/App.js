@@ -15,6 +15,8 @@ function App() {
     setData(response)
   }
 
+
+
   return (
     <div className="App">
       {/*<header className="App-header">*/}
@@ -33,8 +35,6 @@ function App() {
       {/*</header>*/}
 
       {data}
-      
-      HEY
 
     </div>
   );

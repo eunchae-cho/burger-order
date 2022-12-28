@@ -2,15 +2,13 @@ import axios from 'axios';
 
 const BASE_URL = 'http://localhost:8080'
 
-const axiosApi = (url, options) => {
+const axiosApi = () => {
     const instance = axios.create({
-        baseURL: url,
-        withCredentials:true,
+        baseURL: BASE_URL,
+        withCredentials: true,
         headers: {
-            'Content-Type' : 'application/json',
-            'Access-Control-Allow-Origin' : '*'
-         },
-        ...options })
+            'Content-Type' : 'application/json'
+         }})
     return instance
 }
 
@@ -25,10 +23,10 @@ const axiosApi = (url, options) => {
 // }
 
 // axios 인스턴스 생성
-const defaultInstance = axiosApi(BASE_URL)
+const defaultInstance = axiosApi()
 
 // auth 인스턴스 생성
-// export const authInstance = axiosAuthApiBASE_URL)
+// export const authInstance = axiosAuthApi(BASE_URL)
 
 // 요청 타임아웃 설정
 defaultInstance.defaults.timeout = 2500
