@@ -33,6 +33,10 @@ const Home = () => {
         navigate('/order', { state: useType.FOR_HERE });
     }
 
+    const clickTakeAway = () => {
+        navigate('/order', { state: useType.TAKE_AWAY });
+    }
+
     return (
         <div className='home'>
 
@@ -60,12 +64,13 @@ const Home = () => {
                             >
                                 <Image centered size='small' src={EatingImg} />
                             </Transition>
-                            <div className='for-here'> 매장식사 </div>
+                            <div className='eating-type'> 매장식사 </div>
                         </Grid.Column>
 
                         <Grid.Column
                             className='grid-for-here'
                             onMouseEnter={handleTakeAway}
+                            onClick={clickTakeAway}
                         >
                             <Transition
                                 animation={animationTwo}
@@ -74,7 +79,7 @@ const Home = () => {
                             >
                                 <Image centered size='small' src={TakeAwayImg} />
                             </Transition>
-                            <div className='for-here'> 포장하기 </div>
+                            <div className='eating-type'> 포장하기 </div>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
