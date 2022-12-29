@@ -9,7 +9,7 @@ const axiosApi = () => {
         headers: {
             'Content-Type' : 'application/json'
          }})
-    return instance
+    return instance;
 }
 
 // auth axios
@@ -23,7 +23,7 @@ const axiosApi = () => {
 // }
 
 // axios 인스턴스 생성
-const defaultInstance = axiosApi()
+const defaultInstance = axiosApi();
 
 // auth 인스턴스 생성
 // export const authInstance = axiosAuthApi(BASE_URL)
@@ -34,11 +34,11 @@ defaultInstance.defaults.timeout = 2500
 // 요청 인터셉터 설정
 defaultInstance.interceptors.request.use(
     config => {
-        return config
+        return config;
     },
     error => {
         console.error(error)
-        return Promise.reject(error)
+        return Promise.reject(error);
     }
 )
 
@@ -46,12 +46,12 @@ defaultInstance.interceptors.request.use(
 defaultInstance.interceptors.response.use(
     response => {
         const result = response.data
-        return result
+        return result;
     },
     error => {
         console.error(error)
-        return Promise.reject(error)
+        return Promise.reject(error);
     }
 )
 
-export default defaultInstance
+export default defaultInstance;

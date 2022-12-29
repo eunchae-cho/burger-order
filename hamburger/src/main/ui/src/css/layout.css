@@ -1,0 +1,42 @@
+.header {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.home {
+    width: 80%;
+    margin: auto;
+}
+
+#home-msg {
+    margin-bottom: 40px;
+    background: #f7f4d9;
+    color: #a333c8;
+    box-shadow: 0 0 0 2px #a333c8 inset, 0 0 0 0 transparent;
+}
+
+#segment-choose {
+    border: 3px solid;
+}
+
+#divider-or:before {
+    border: 1px solid;
+}
+
+#divider-or:after {
+    border: 1px solid;
+}
+
+.grid-for-here:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.for-here {
+    padding-top: 20px;
+    font-size: x-large;
+}

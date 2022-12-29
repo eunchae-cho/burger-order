@@ -1,0 +1,20 @@
+.ui.vertical.tabular.menu {
+    font-family: 'yangJin';
+    border-right: 1px solid;
+    /*background: none;*/
+}
+
+.ui.vertical.tabular.menu .active.item {
+    border: 3px solid;
+    background: cornflowerblue;
+}
+
+.ui.attached.segment {
+    border: 3px solid;
+}
+
+.ui.modal>.actions {
+    border: none;
+
+}
+

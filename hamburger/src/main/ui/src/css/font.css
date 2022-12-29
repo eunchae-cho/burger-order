@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'buttonHighlight';
+    src: url("../assets/fonts/ButtonHilightFLF.ttf");
+}
+
+@font-face {
+    font-family: 'buttonPlain';
+    src: url("../assets/fonts/ButtonPlainFLF.ttf");
+}
+
+@font-face {
+    font-family: 'bodenBold';
+    src: url("../assets/fonts/BodoniFLF-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'yangJin';
+    src: url("../assets/fonts/yangJin.ttf");
+}
