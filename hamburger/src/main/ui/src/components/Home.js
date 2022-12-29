@@ -3,7 +3,7 @@ import EatingImg from '../assets/icons/healthy-food.png'
 import TakeAwayImg from '../assets/icons/take-away.png'
 import {useState} from "react";
 import { useNavigate } from 'react-router-dom';
-import Order from "./Order";
+import {useType} from "../utils/typeHandler/useType";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -29,6 +29,10 @@ const Home = () => {
         setVisibleTwo(prevState => !prevState);
     }
 
+    const clickForHere = () => {
+        navigate('/order', { state: useType.FOR_HERE });
+    }
+
     return (
         <div className='home'>
 
@@ -47,7 +51,7 @@ const Home = () => {
                         <Grid.Column
                             className='grid-for-here'
                             onMouseEnter={handleForHere}
-                            onClick={() => navigate('/order')}
+                            onClick={clickForHere}
                         >
                             <Transition
                                 animation={animation}

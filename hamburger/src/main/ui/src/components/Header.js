@@ -1,44 +1,51 @@
-import {Button, Confirm} from "semantic-ui-react";
-import {useState} from "react";
-import {useLocation, useNavigate} from "react-router-dom";
+import {Grid, Icon, Message} from "semantic-ui-react";
+import {useType} from "../utils/typeHandler/useType";
 
-const MAIN_URL = '/';
+const Header = ({ type }) => {
 
-const Header = () => {
-    const navigate = useNavigate();
-    const location = useLocation();
-    const [open, setOpen] = useState(false);
+    console.log(type)
 
-    const handleClick = () => {
-        if (location.pathname !== MAIN_URL) {
-            setOpen(prevState => !prevState)
-        }
-    }
     return (
-        <>
-            <div
-                className='header'
-                onClick={handleClick}
-            >
-                OhBrand Burger
-            </div>
-
-            {/* 초기화 확인창 */}
-            <Confirm
-                open={open}
-                size='mini'
-                cancelButton={<Button color='grey'>아니요</Button>}
-                confirmButton={<Button color='purple'>예</Button>}
-                content={
-                <div style={{ padding: '18px' }}>
-                    <p>선택하신 내용이 모두 초기화됩니다.</p>
-                    <p>처음으로 돌아가시겠습니까?</p>
+        <Grid className='grid-header'>
+            <Grid.Column className='grid-header-col' width={3}>
+                <div className='header'>
+                    OhBrand Burger
                 </div>
-                }
-                onCancel={() => setOpen(false)}
-                onConfirm={() => navigate('/')}
-            />
-        </>
+            </Grid.Column>
+            {
+                type === useType.FOR_HERE
+                &&
+                <Grid.Column className='grid-header-col-2' width={3}>
+                    <div className='header'>
+                        매 장 식 사
+                    </div>
+                </Grid.Column>
+            
+            }
+            {
+                type === useType.TAKE_AWAY
+                &&
+                <Grid.Column className='grid-header-col-2' width={5}>
+                    <div className='header'>
+                        포 장 하 기
+                    </div>
+                </Grid.Column>
+
+            }
+            <Grid.Column className='grid-header-col' width={1}>
+                <Grid.Row>
+                    <Grid.Column>
+                        <Message id='cart-num'>
+                            0
+                        </Message>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <Icon name='cart plus' size='large' />
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid.Column>
+        </Grid>
+
     );
 }
 

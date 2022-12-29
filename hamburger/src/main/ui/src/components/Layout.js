@@ -5,7 +5,7 @@ import '../css/layout.css'
 const Layout = (props) => {
     return (
         <div style={{ textAlign: 'center' }}>
-            <Header/>
+            <Header type={props.type}/>
 
             <main style={{ minHeight: '800px' }}>
                 {props.children}

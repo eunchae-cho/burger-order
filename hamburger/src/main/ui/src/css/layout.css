@@ -4,7 +4,33 @@
     margin-top: 25px;
     margin-bottom: 40px;
     font-size: x-large;
-    cursor: pointer;
+}
+
+.grid-header {
+    justify-content: space-between;
+}
+
+.grid-header-col {
+    align-self: center;
+}
+
+.grid-header-col-2 {
+    align-self: center;
+    color: orangered;
+    /*margin-right: auto;*/
+}
+
+#cart-num {
+    font-weight: bold;
+    background: white;
+    border-radius: 100%;
+    box-shadow: none;
+    margin: auto;
+    margin-left: 29px;
+    margin-bottom: 3px;
+    padding: 6px;
+    padding-bottom: 1px;
+    width: 28px;
 }
 
 .home {
@@ -40,3 +66,18 @@
     padding-top: 20px;
     font-size: x-large;
 }
+
+.btn-back-div {
+    text-align: left;
+}
+
+#btn-back {
+    background: none;
+    font-family: yangJin;
+    color: black;
+}
+
+#btn-back:hover {
+    opacity: 0.7;
+}
+
