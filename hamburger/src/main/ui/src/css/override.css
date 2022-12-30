@@ -1,6 +1,7 @@
 .ui.vertical.tabular.menu {
     font-family: 'yangJin';
     border-right: 1px solid;
+    font-size: larger;
     /*background: none;*/
 }
 

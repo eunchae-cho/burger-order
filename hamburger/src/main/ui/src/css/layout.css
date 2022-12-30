@@ -96,7 +96,35 @@
     opacity: 0.7;
 }
 
-.horizontal-sidebar{
+#horizontal-sidebar{
+    width: 360px;
     padding: 10px;
     background: rgb(0 0 0 / 75%);
+}
+
+.menu-title {
+    font-size: x-large;
+    padding-block: 10px;
+}
+
+#grid-menu-row {
+    padding-block: 2rem;
+}
+
+#grid-menu-col {
+    margin-block: 20px;
+    text-align: -webkit-center;
+}
+
+.menu-plus-icon:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.card-price {
+    text-align: right;
+}
+.dimmer-menu:hover {
+    filter: brightness(30%);
+    cursor: pointer;
 }

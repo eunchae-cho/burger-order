@@ -1,16 +1,19 @@
 import {Button, Confirm, Container, Icon, Sidebar, Tab} from "semantic-ui-react";
 import {useLocation, useNavigate} from "react-router-dom";
 import {useState} from "react";
-import HorizontalSidebar from "./HorizontalSidebar";
+import HorizontalSidebar from "./sidebar/HorizontalSidebar";
 import {useDispatch, useSelector} from "react-redux";
 import {sidebarType} from "../utils/typeHandler/sidebarType";
+import {menuType} from "../utils/typeHandler/menuType";
+import TabPane from "./tabPane/TabPane";
+import {burgers, drinks, sides} from "../mock";
 
 const MAIN_URL = '/';
 
 const panes = [
-    { menuItem: 'Tab 1', render: () => <Tab.Pane>Tab 1 Content</Tab.Pane> },
-    { menuItem: 'Tab 2', render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
-    { menuItem: 'Tab 3', render: () => <Tab.Pane>Tab 3 Content</Tab.Pane> },
+    { menuItem: menuType.BURGER, render: () => <TabPane type={menuType.BURGER} dataList={burgers} /> },
+    { menuItem: menuType.SIDE, render: () => <TabPane type={menuType.SIDE} dataList={sides} /> },
+    { menuItem: menuType.DRINK, render: () => <TabPane type={menuType.DRINK} dataList={drinks} /> },
 ]
 
 const Order = () => {

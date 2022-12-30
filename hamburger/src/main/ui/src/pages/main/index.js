@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout";
+import Layout from "../../components/section/Layout";
 import Home from "../../components/Home";
 import rootReducer from "../../utils/reducer";
 import {applyMiddleware, createStore} from "redux";

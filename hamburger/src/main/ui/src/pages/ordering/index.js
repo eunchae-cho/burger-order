@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout";
+import Layout from "../../components/section/Layout";
 import Order from "../../components/Order";
 import {useEffect, useState} from "react";
 import {isNotEmpty} from "../../utils/ObjectUtils";
