@@ -40,12 +40,12 @@ const Home = () => {
     return (
         <div className='home'>
 
-            <Message id='home-msg'>
-                WELCOME
-                <br/>
-                <br/>
-                어서오세요! :)
-            </Message>
+            {/*<Message id='home-msg'>*/}
+            {/*    WELCOME*/}
+            {/*    <br/>*/}
+            {/*    <br/>*/}
+            {/*    어서오세요! :)*/}
+            {/*</Message>*/}
 
             <Segment placeholder id='segment-choose'>
                 <Grid columns={2} stackable textAlign='center'>

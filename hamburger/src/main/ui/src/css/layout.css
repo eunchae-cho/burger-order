@@ -35,6 +35,7 @@
 .home {
     width: 80%;
     margin: auto;
+    margin-block: 50px;
 }
 
 #home-msg {
