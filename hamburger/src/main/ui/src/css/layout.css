@@ -124,7 +124,17 @@
 .card-price {
     text-align: right;
 }
+
+.btn-cart {
+    text-align: right;
+    margin-top: 12px;
+}
+
 .dimmer-menu:hover {
     filter: brightness(30%);
     cursor: pointer;
+}
+
+#menu-header-modal {
+    font-family: yangJin;
 }
