@@ -76,3 +76,46 @@ export const drinks = [
         image: ''
     }
 ]
+
+export const ingredients =[
+    {
+        id: 1,
+        parentId: 1,
+        name: '버거번',
+        addable: false,
+        exceptional: false,
+        request: false
+    },
+    {
+        id: 2,
+        parentId: 1,
+        name: '패티',
+        addable: true,
+        exceptional: false,
+        request: false
+    },
+    {
+        id: 3,
+        parentId: 1,
+        name: '토마토',
+        addable: true,
+        exceptional: true,
+        request: false
+    },
+    {
+        id: 4,
+        parentId: 1,
+        name: '양파',
+        addable: true,
+        exceptional: true,
+        request: false
+    },
+    {
+        id: 5,
+        parentId: 1,
+        name: '소스많이',
+        addable: false,
+        exceptional: false,
+        request: true
+    }
+]
