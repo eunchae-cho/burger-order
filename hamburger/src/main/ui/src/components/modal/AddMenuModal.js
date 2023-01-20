@@ -35,7 +35,7 @@ const AddMenuModal = ({ item }) => {
             option[0].cnt = option[0].cnt - 1;
 
             // cnt 0 이하 일 시 옵션 삭제
-            if (option[0].cnt < 0) {
+            if (option[0].cnt <= 0) {
                 setOptions(options.filter((opt) => opt.optionId !== item.id));
                 return;
             }
