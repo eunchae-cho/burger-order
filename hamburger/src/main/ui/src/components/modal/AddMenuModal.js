@@ -27,7 +27,7 @@ const AddMenuModal = ({ item }) => {
         }
     }
 
-    // 추가 옵션 이벤트 - minus
+    // 제외 옵션 이벤트 - minus
     const handleAddMinus = (item) => {
         // 옵션이 존재할 때
         if (hasOption(options, item.id) || item.cnt < 0) {
@@ -76,6 +76,18 @@ const AddMenuModal = ({ item }) => {
             };
             setOptions([...options, option]);
         }
+    }
+
+    // 취소 버튼  클릭 시
+    const handleCancel = () => {
+        setOpen(false);
+        setOptions([]);
+    }
+
+    // 담기 버튼 클릭 시
+    const handleAdd = () => {
+        setOpen(false);
+        setOptions([]);
     }
 
     return (
@@ -197,10 +209,10 @@ const AddMenuModal = ({ item }) => {
                 </Modal.Description>
             </Modal.Content>
             <Modal.Actions>
-                <Button color='grey' onClick={() => setOpen(false)}>
+                <Button color='grey' onClick={handleCancel}>
                     취소
                 </Button>
-                <Button onClick={() => setOpen(false)} primary>
+                <Button onClick={handleAdd} primary>
                     담기
                 </Button>
             </Modal.Actions>
