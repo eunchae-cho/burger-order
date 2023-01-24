@@ -3,6 +3,7 @@ import {Button, Modal, Image, Divider, Table, Checkbox, Segment} from "semantic-
 import WhiteFrame from '../../assets/images/white_frame.png'
 import {ingredients} from "../../mock";
 import {optionType} from "../../utils/typeHandler/optionType";
+import {isEmpty} from "../../utils/ObjectUtils";
 
 const AddMenuModal = ({ item }) => {
     const [open, setOpen] = useState(false);
@@ -12,9 +13,10 @@ const AddMenuModal = ({ item }) => {
     const handleAddPlus = (item) => {
         // 옵션이 존재할 때
         if (hasOption(options, item.id)) {
-            const option = options.filter((opt) => opt.optionId === item.id);
+            const option = options.filter((opt) => opt.optionId === item.id && opt.type === optionType.ADD);
+            if (isEmpty(option)) { return; }
             option[0].cnt += 1;
-            setOptions([...options.filter((opt) => opt.optionId !== item.id), option[0]]);
+            setOptions([...options.filter((opt) => opt.optionId !== item.id && opt.type !== optionType.ADD), option[0]]);
         } else {
             const option ={
                 optionId: item.id,
@@ -27,20 +29,20 @@ const AddMenuModal = ({ item }) => {
         }
     }
 
-    // 제외 옵션 이벤트 - minus
+    // 추가 옵션 이벤트 - minus
     const handleAddMinus = (item) => {
         // 옵션이 존재할 때
-        if (hasOption(options, item.id) || item.cnt < 0) {
-            const option = options.filter((opt) => opt.optionId === item.id);
+        if (hasOption(options, item.id)) {
+            const option = options.filter((opt) => opt.optionId === item.id && opt.type === optionType.ADD);
+            if (isEmpty(option)) { return; }
             option[0].cnt = option[0].cnt - 1;
-
             // cnt 0 이하 일 시 옵션 삭제
             if (option[0].cnt <= 0) {
-                setOptions(options.filter((opt) => opt.optionId !== item.id));
+                setOptions(options.filter((opt) => opt.optionId !== item.id && opt.type !== optionType.ADD));
                 return;
             }
 
-            setOptions([...options.filter((opt) => opt.optionId !== item.id), option[0]]);
+            setOptions([...options.filter((opt) => opt.optionId !== item.id && opt.type !== optionType.ADD), option[0]]);
         }
     }
 
@@ -48,7 +50,7 @@ const AddMenuModal = ({ item }) => {
     const handleExceptional = (item) => {
         // 옵션이 존재할 때
         if (hasOption(options, item.id)) {
-            setOptions(options.filter((opt) => opt.optionId !== item.id));
+            setOptions(options.filter((opt) => opt.optionId !== item.id && opt.type !== optionType.EXCEPT));
         } else {
             const option ={
                 optionId: item.id,
@@ -65,7 +67,7 @@ const AddMenuModal = ({ item }) => {
     const handleRequest = (item) => {
         // 옵션이 존재할 때
         if (hasOption(options, item.id)) {
-            setOptions(options.filter((opt) => opt.optionId !== item.id));
+            setOptions(options.filter((opt) => opt.optionId !== item.id && opt.type !== optionType.REQUEST));
         } else {
             const option ={
                 optionId: item.id,
