@@ -6,6 +6,6 @@ import org.springframework.data.annotation.Id
 abstract class BaseEntity (
     @Id
     @Generated
-    open val id: String
+    open val id: Long
 )
 
