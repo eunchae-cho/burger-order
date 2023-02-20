@@ -11,4 +11,8 @@ class BurgerService (
     fun getAll(): List<BurgerEntity> {
         return burgerRepository.findAll()
     }
+
+    fun insert(burgerEntity: BurgerEntity) {
+        burgerRepository.insert(burgerEntity)
+    }
 }

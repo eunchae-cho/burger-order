@@ -20,11 +20,14 @@ class OrderController(
     }
 
     @PostMapping
-    fun insertOne() {
-//        var burgerEntity = BurgerEntity(
-//            name = "테스트버거",
-//            image = null,
-//            description = "test",
-//            price = "8000")
+    fun insertOne(): ApiResponse<BurgerEntity> {
+        var burgerEntity = BurgerEntity(
+            id = null,
+            name = "테스트버거",
+            image = null,
+            description = "test",
+            price = "8000")
+
+        return ApiResponse.ok(burgerService.insert(burgerEntity))
     }
 }
