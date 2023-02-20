@@ -7,13 +7,14 @@
 
 ### 개발 환경
 -  🖥 Mac
-
+- IntelliJ IDE
+- WebStorm IDE
 
 ### 기술 스택
 
 - React
+- Kotlin
 - Node v19.4.0
 - yarn 1.22.19
-- Kotlin
 - MongoDB
 
