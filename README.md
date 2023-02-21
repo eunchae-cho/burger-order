@@ -5,16 +5,17 @@
 햄버거 주문 웹을 만들어 보자!
 ```
 
-### 개발 환경
+### Environment
 -  🖥 Mac
 - IntelliJ IDE
 - WebStorm IDE
 
-### 기술 스택
+### Skills
 
-- React
 - Kotlin
+- Spring Boot v2.7.8
+- React
 - Node v19.4.0
-- yarn 1.22.19
+- yarn v1.22.19
 - MongoDB
 
