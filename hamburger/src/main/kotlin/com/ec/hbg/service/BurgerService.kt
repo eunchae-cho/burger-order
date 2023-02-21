@@ -1,6 +1,6 @@
 package com.ec.hbg.service
 
-import com.ec.hbg.entity.BurgerEntity
+import com.ec.hbg.model.Burger
 import com.ec.hbg.repository.BurgerRepository
 import org.springframework.stereotype.Service
 
@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service
 class BurgerService (
  private val burgerRepository: BurgerRepository
 ) {
-    fun getAll(): List<BurgerEntity> {
+    fun getAll(): List<Burger> {
         return burgerRepository.findAll()
     }
 
-    fun insert(burgerEntity: BurgerEntity) {
-        burgerRepository.insert(burgerEntity)
+    fun save(burgerEntity: Burger) {
+        burgerRepository.save(burgerEntity)
     }
 }

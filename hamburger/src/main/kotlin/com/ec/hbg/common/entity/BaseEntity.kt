@@ -1,11 +1,8 @@
 package com.ec.hbg.common.entity
 
-import lombok.Generated
 import org.springframework.data.annotation.Id
 
-abstract class BaseEntity (
+abstract class BaseEntity {
     @Id
-    @Generated
-    open val id: Long? = null
-)
-
+    val id: String? = null
+}
