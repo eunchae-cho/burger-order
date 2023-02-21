@@ -2,6 +2,7 @@ package com.ec.hbg.controller.order
 
 import com.ec.hbg.common.response.ApiResponse
 import com.ec.hbg.model.Burger
+import com.ec.hbg.model.Option
 import com.ec.hbg.service.BurgerService
 import com.ec.hbg.service.SequenceService
 import org.springframework.web.bind.annotation.GetMapping
@@ -22,13 +23,18 @@ class OrderController(
     }
 
     @PostMapping
-    fun insertOne(): ApiResponse<Burger> {
-        var burgerEntity = Burger(
-            id = sequenceService.generateSequence(Burger.SEQUENCE_NAME),
-            name = "테스트버거",
-            image = null,
-            description = "test",
-            price = "8000")
-        return ApiResponse.ok(burgerService.save(burgerEntity))
+    fun save(): ApiResponse<Burger> {
+        var burger = Burger(
+            id = sequenceService.generateSequence(Burger.SEQUENCE_NAME)!!)
+        burger.name = "테스트"
+        burger.price = "9000"
+        var option1 = Option(
+            id = sequenceService.generateSequence(Option.SEQUENCE_NAME)!!,
+            parentId = burger.id,
+            name = ""
+        )
+
+//        burger.options
+        return ApiResponse.ok(burgerService.save(burger))
     }
 }

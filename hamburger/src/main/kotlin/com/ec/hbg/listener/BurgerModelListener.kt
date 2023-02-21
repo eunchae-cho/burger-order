@@ -10,7 +10,7 @@ class BurgerModelListener(
 ): AbstractMongoEventListener<Burger>() {
     override fun onBeforeConvert(event: BeforeConvertEvent<Burger>) {
         if (event.source.id!! < 1) {
-            event.source.id = sequenceService.generateSequence(Burger.SEQUENCE_NAME)
+            event.source.id = sequenceService.generateSequence(Burger.SEQUENCE_NAME)!!
         }
     }
 }

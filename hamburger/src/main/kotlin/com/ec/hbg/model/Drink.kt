@@ -4,15 +4,14 @@ import com.ec.hbg.common.entity.Menu
 import org.springframework.data.annotation.Transient
 import org.springframework.data.mongodb.core.mapping.Document
 
-@Document(collection = "burger")
-data class Burger(
+@Document(collection = "drink")
+data class Drink(
     override var id: Long
 ) : Menu() {
 
-    lateinit var options: List<Option>
     companion object {
         @Transient
-        const val SEQUENCE_NAME: String = "burger_sequence"
+        const val SEQUENCE_NAME: String = "drink_sequence"
     }
 
 }
