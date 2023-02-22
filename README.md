@@ -19,6 +19,7 @@
 - Node v19.4.0
 - yarn v1.22.19
 - MongoDB
+- Gradle
   
 ### 🎨 UI 
 - Semantic UI React
