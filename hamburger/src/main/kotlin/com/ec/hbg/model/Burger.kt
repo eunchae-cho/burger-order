@@ -8,8 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document
 data class Burger(
     override var id: Long
 ) : Menu() {
-
-    lateinit var options: List<Option>
+    var ingredient: List<Ingredient>? = listOf()
     companion object {
         @Transient
         const val SEQUENCE_NAME: String = "burger_sequence"

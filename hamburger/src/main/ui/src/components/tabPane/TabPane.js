@@ -2,11 +2,12 @@ import {Button, Card, Grid, Icon, Image, Tab} from "semantic-ui-react";
 import WhiteFrame from '../../assets/images/white_frame.png'
 import uuid from "react-uuid";
 import AddMenuModal from "../modal/AddMenuModal";
+import {useState} from "react";
 
-const TabPane = ({ type, dataList }) => {
+const TabPane = ({ type, data }) => {
 
-    const activeArr = new Array(dataList.length);
-    activeArr.fill(false);
+    const [dataList, setDataList] = useState([]);
+    data.then(value => setDataList(value.data))
 
     return (
         <Tab.Pane>

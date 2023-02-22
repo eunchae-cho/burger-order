@@ -12,7 +12,7 @@ class BurgerService (
         return burgerRepository.findAll()
     }
 
-    fun save(burgerEntity: Burger) {
-        burgerRepository.save(burgerEntity)
+    fun save(burger: Burger) {
+        burgerRepository.save(burger)
     }
 }

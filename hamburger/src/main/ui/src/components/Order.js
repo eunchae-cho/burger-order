@@ -6,14 +6,14 @@ import {useDispatch, useSelector} from "react-redux";
 import {sidebarType} from "../utils/typeHandler/sidebarType";
 import {menuType} from "../utils/typeHandler/menuType";
 import TabPane from "./tabPane/TabPane";
-import {burgers, drinks, sides} from "../mock";
+import {getAllBurgers, getAllDrinks, getAllSides} from "../services/menu";
 
 const MAIN_URL = '/';
 
 const panes = [
-    { menuItem: menuType.BURGER, render: () => <TabPane type={menuType.BURGER} dataList={burgers} /> },
-    { menuItem: menuType.SIDE, render: () => <TabPane type={menuType.SIDE} dataList={sides} /> },
-    { menuItem: menuType.DRINK, render: () => <TabPane type={menuType.DRINK} dataList={drinks} /> },
+    { menuItem: menuType.BURGER, render: () => <TabPane type={menuType.BURGER} data={getAllBurgers()} /> },
+    { menuItem: menuType.SIDE, render: () => <TabPane type={menuType.SIDE} data={getAllSides()} /> },
+    { menuItem: menuType.DRINK, render: () => <TabPane type={menuType.DRINK} data={getAllDrinks()} /> },
 ]
 
 const Order = () => {
@@ -22,6 +22,7 @@ const Order = () => {
     const dispatch = useDispatch();
     const visible = useSelector(state => state.sidebar.open)
     const [open, setOpen] = useState(false);
+
     const handleClick = () => {
         if (location.pathname !== MAIN_URL) {
             setOpen(prevState => !prevState)
