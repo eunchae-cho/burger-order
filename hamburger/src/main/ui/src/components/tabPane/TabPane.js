@@ -1,8 +1,10 @@
-import {Button, Card, Grid, Icon, Image, Tab} from "semantic-ui-react";
+import {Card, Grid, Image, Tab} from "semantic-ui-react";
 import WhiteFrame from '../../assets/images/white_frame.png'
 import uuid from "react-uuid";
-import AddMenuModal from "../modal/AddMenuModal";
 import {useState} from "react";
+import BurgerOptionModal from "../modal/BurgerOptionModal";
+import {menuType} from "../../utils/typeHandler/menuType";
+import OtherOptionModal from "../modal/OtherOptionModal";
 
 const TabPane = ({ type, data }) => {
 
@@ -34,7 +36,14 @@ const TabPane = ({ type, data }) => {
                                             {item.price} 원
                                         </div>
                                         <div className='btn-cart'>
-                                            <AddMenuModal item={item}/>
+                                            {
+                                                type === menuType.BURGER
+                                                    ?
+                                                    <BurgerOptionModal item={item} />
+                                                    :
+                                                    <OtherOptionModal item={item} />
+                                            }
+
                                         </div>
                                     </Card.Content>
                                 </Card>

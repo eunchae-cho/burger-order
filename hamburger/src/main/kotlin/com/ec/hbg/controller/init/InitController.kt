@@ -34,7 +34,8 @@ class InitController(
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
                 parentId = burger.id,
-                name = "패티"
+                name = "패티",
+                addOption = true
             ),
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
@@ -44,7 +45,8 @@ class InitController(
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
                 parentId = burger.id,
-                name = "양파"
+                name = "양파",
+                exceptOption = true
             ),
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
@@ -54,7 +56,9 @@ class InitController(
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
                 parentId = burger.id,
-                name = "토마토"
+                name = "토마토",
+                addOption = true,
+                exceptOption = true
             ),
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
@@ -76,7 +80,8 @@ class InitController(
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
                 parentId = burger2.id,
-                name = "패티"
+                name = "패티",
+                addOption = true
             ),
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
@@ -86,7 +91,8 @@ class InitController(
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
                 parentId = burger2.id,
-                name = "양파"
+                name = "양파",
+                exceptOption = true
             ),
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
@@ -96,7 +102,9 @@ class InitController(
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
                 parentId = burger2.id,
-                name = "토마토"
+                name = "토마토",
+                addOption = true,
+                exceptOption = true
             ),
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
@@ -106,7 +114,8 @@ class InitController(
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
                 parentId = burger2.id,
-                name = "치즈"
+                name = "치즈",
+                addOption = true
             ),
         )
 
@@ -123,7 +132,8 @@ class InitController(
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
                 parentId = burger3.id,
-                name = "패티"
+                name = "패티",
+                addOption = true
             ),
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
@@ -133,7 +143,8 @@ class InitController(
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
                 parentId = burger3.id,
-                name = "양파"
+                name = "양파",
+                exceptOption = true
             ),
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
@@ -152,15 +163,16 @@ class InitController(
         var burger4= Burger(
             id = sequenceService.generateSequence(Burger.SEQUENCE_NAME)!!
         )
-        burger4.name = "더블 비프 버거"
-        burger4.price = "10500"
-        burger4.description = "맛있는 패티가 두개"
+        burger4.name = "머쉬룸 버거"
+        burger4.price = "11500"
+        burger4.description = "향긋한 버섯과 패티로 맛있는거 두개!"
 
         burger4.ingredient = listOf(
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
                 parentId = burger4.id,
-                name = "패티"
+                name = "패티",
+                addOption = true
             ),
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
@@ -170,7 +182,14 @@ class InitController(
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
                 parentId = burger4.id,
-                name = "양파"
+                name = "양파",
+                exceptOption = true
+            ),
+            Ingredient(
+                id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
+                parentId = burger4.id,
+                name = "머쉬룸",
+                addOption = true
             ),
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
@@ -180,7 +199,9 @@ class InitController(
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
                 parentId = burger4.id,
-                name = "토마토"
+                name = "토마토",
+                addOption = true,
+                exceptOption = true
             ),
             Ingredient(
                 id = sequenceService.generateSequence(Ingredient.SEQUENCE_NAME)!!,
