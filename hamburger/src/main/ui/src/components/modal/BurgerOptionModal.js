@@ -3,12 +3,12 @@ import {Button, Modal, Image, Divider, Table, Checkbox, Segment} from "semantic-
 import WhiteFrame from '../../assets/images/white_frame.png'
 import {ingredients} from "../../mock";
 import {optionType} from "../../utils/typeHandler/optionType";
-import {isEmpty} from "../../utils/ObjectUtils";
+import {isEmpty, isNotEmpty} from "../../utils/ObjectUtils";
 
 const BurgerOptionModal = ({ item }) => {
     const [open, setOpen] = useState(false);
     const [ingredients, setIngredients] = useState([]);
-    const [options, setOptions] = useState([]);
+    const [addOptions, setAddOptions] = useState([]);
 
     useEffect(() => {
         if (open) {
@@ -19,14 +19,63 @@ const BurgerOptionModal = ({ item }) => {
     // 취소 버튼  클릭 시
     const handleCancel = () => {
         setOpen(false);
-        setOptions([]);
+        setAddOptions([]);
     }
 
     // 담기 버튼 클릭 시
     const handleAdd = () => {
         setOpen(false);
-        setOptions([]);
+        setAddOptions([]);
     }
+
+    // 추가 옵션에서 플러스 버튼을 누를 때
+    const handlePlusBtn = (ingredient) => {
+        let option = addOptions.filter((i) => i.id === ingredient.id);
+        // 값이 존재할 때
+        if (option.length > 0) {
+            if (option.count > 5) {
+                alert('최대 5개까지 추가 가능합니다.');
+                return;
+            }
+            option[0].count += 1;
+            setAddOptions([...addOptions.filter((i) => i.id !== ingredient.id), option]);
+
+        } else {
+            option = {
+                id: ingredient.id,
+                parentId: ingredient.parentId,
+                name: ingredient.name,
+                count: 1
+            }
+
+            setAddOptions([...addOptions, option]);
+        }
+
+        console.log(addOptions)
+    }
+
+    // 추가 옵션에서 마이너스 버튼을 누를 때
+     const handleMinusBtn = (ingredient) => {
+        let option = addOptions.filter((i) => i.id === ingredient.id);
+        // 값이 존재할 때
+        if (option.length > 0) {
+            if (option.count > 5) {
+                alert('최대 5개까지 추가 가능합니다.');
+                return;
+            }
+
+            option[0].count -= 1;
+
+            // 값이 0일 때 배열에서 빼기
+            if (option.count <= 0) {
+                setAddOptions(addOptions.filter((i) => i.id !== ingredient.id));
+                return;
+            }
+
+            setAddOptions([...addOptions, option]);
+
+        }
+     }
 
     return (
         <Modal
@@ -62,8 +111,8 @@ const BurgerOptionModal = ({ item }) => {
                                         <Table.Cell width={4}>{ingredient.name}</Table.Cell>
                                         <Table.Cell textAlign='right'>
                                             <Button.Group size='mini'>
-                                                <Button icon='plus' />
-                                                <Button icon='minus' />
+                                                <Button icon='plus' onClick={() => handlePlusBtn(ingredient)}/>
+                                                <Button icon='minus' onClick={() => handleMinusBtn(ingredient)}/>
                                             </Button.Group>
                                         </Table.Cell>
                                     </Table.Row>
@@ -113,28 +162,13 @@ const BurgerOptionModal = ({ item }) => {
 
                     {/* 옵션 내역 */}
                     <Segment style={{ marginBlock: '30px'}}>
-                        {/*{*/}
-                        {/*    options.map((item) => (*/}
-                        {/*        item.type === optionType.ADD ?*/}
-                        {/*        <div style={{ fontSize: 'small' }}>*/}
-                        {/*            {item.name} {item.cnt} 추가*/}
-                        {/*        </div>*/}
-                        {/*            :*/}
-                        {/*        (*/}
-                        {/*            item.type === optionType.EXCEPT ?*/}
-                        {/*                <div style={{ fontSize: 'small' }}>*/}
-                        {/*                    {item.name} 빼기*/}
-                        {/*                </div>*/}
-                        {/*                :*/}
-                        {/*                (*/}
-                        {/*                    item.type === optionType.REQUEST &&*/}
-                        {/*                    <div style={{ fontSize: 'small' }}>*/}
-                        {/*                        {item.name}*/}
-                        {/*                    </div>*/}
-                        {/*                )*/}
-                        {/*        )*/}
-                        {/*    ))*/}
-                        {/*}*/}
+                        {
+                            addOptions.map((item) => (
+                                <div style={{ fontSize: 'small' }}>
+                                    {item.name} {item.count} 추가
+                                </div>
+                            ))
+                        }
                     </Segment>
 
                 </Modal.Description>
