@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useReducer, useState} from "react";
 import {Button, Modal, Image, Divider, Table, Checkbox, Segment} from "semantic-ui-react";
 import WhiteFrame from '../../assets/images/white_frame.png'
 import {ingredients} from "../../mock";
@@ -9,6 +9,7 @@ const BurgerOptionModal = ({ item }) => {
     const [open, setOpen] = useState(false);
     const [ingredients, setIngredients] = useState([]);
     const [addOptions, setAddOptions] = useState([]);
+    const [any, forceUpdate] = useReducer(num => num + 1, 0);
 
     useEffect(() => {
         if (open) {
@@ -30,15 +31,17 @@ const BurgerOptionModal = ({ item }) => {
 
     // 추가 옵션에서 플러스 버튼을 누를 때
     const handlePlusBtn = (ingredient) => {
-        let option = addOptions.filter((i) => i.id === ingredient.id);
+        let option = addOptions.filter((i) => i.id === ingredient.id)[0];
         // 값이 존재할 때
-        if (option.length > 0) {
-            if (option.count > 5) {
+        if (option !== undefined) {
+            if (option.count >= 5) {
                 alert('최대 5개까지 추가 가능합니다.');
                 return;
             }
-            option[0].count += 1;
-            setAddOptions([...addOptions.filter((i) => i.id !== ingredient.id), option]);
+
+            option.count += 1;
+
+            forceUpdate();
 
         } else {
             option = {
@@ -47,24 +50,17 @@ const BurgerOptionModal = ({ item }) => {
                 name: ingredient.name,
                 count: 1
             }
-
             setAddOptions([...addOptions, option]);
         }
-
-        console.log(addOptions)
     }
 
     // 추가 옵션에서 마이너스 버튼을 누를 때
      const handleMinusBtn = (ingredient) => {
-        let option = addOptions.filter((i) => i.id === ingredient.id);
+        let option = addOptions.filter((i) => i.id === ingredient.id)[0];
         // 값이 존재할 때
-        if (option.length > 0) {
-            if (option.count > 5) {
-                alert('최대 5개까지 추가 가능합니다.');
-                return;
-            }
+        if (option !== undefined) {
 
-            option[0].count -= 1;
+            option.count -= 1;
 
             // 값이 0일 때 배열에서 빼기
             if (option.count <= 0) {
@@ -72,7 +68,7 @@ const BurgerOptionModal = ({ item }) => {
                 return;
             }
 
-            setAddOptions([...addOptions, option]);
+            forceUpdate();
 
         }
      }
@@ -183,16 +179,6 @@ const BurgerOptionModal = ({ item }) => {
             </Modal.Actions>
         </Modal>
     )
-}
-
-function hasOption(list, id) {
-    const filter = list.filter((item) => item.optionId === id)
-
-    if (filter.length === 0) {
-        return false
-    }
-
-    return true
 }
 
 export default BurgerOptionModal
