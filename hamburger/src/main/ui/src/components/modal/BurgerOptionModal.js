@@ -9,6 +9,7 @@ const BurgerOptionModal = ({ item }) => {
     const [open, setOpen] = useState(false);
     const [ingredients, setIngredients] = useState([]);
     const [addOptions, setAddOptions] = useState([]);
+    const [exceptOptions, setExceptOptions] = useState([]);
     const [any, forceUpdate] = useReducer(num => num + 1, 0);
 
     useEffect(() => {
@@ -73,6 +74,25 @@ const BurgerOptionModal = ({ item }) => {
         }
      }
 
+     // 제외 옵션 클릭 시
+     const handleCheckExcept = (e, ingredient ) => {
+         let option = exceptOptions.filter((i) => i.id === ingredient.id)[0];
+
+         // 제외할 시
+         if (option == undefined) {
+             option = {
+                 id: ingredient.id,
+                 parentId: ingredient.parentId,
+                 name: ingredient.name
+             }
+
+             setExceptOptions([...exceptOptions, option]);
+         } else {
+             console.log(exceptOptions.filter((i) => i.id !== ingredient.id));
+             setExceptOptions([...exceptOptions.filter((i) => i.id !== ingredient.id), option]);
+         }
+     }
+
     return (
         <Modal
             open={open}
@@ -131,6 +151,7 @@ const BurgerOptionModal = ({ item }) => {
                                         <Table.Cell textAlign='right'>
                                             <Checkbox
                                                 defaultChecked={false}
+                                                onClick={(e) => handleCheckExcept(e, ingredient)}
                                             />
                                         </Table.Cell>
                                     </Table.Row>
@@ -162,6 +183,13 @@ const BurgerOptionModal = ({ item }) => {
                             addOptions.map((item) => (
                                 <div style={{ fontSize: 'small' }}>
                                     {item.name} {item.count} 추가
+                                </div>
+                            ))
+                        }
+                        {
+                            exceptOptions.map((item) => (
+                                <div style={{ fontSize: 'small' }}>
+                                    {item.name} 제외
                                 </div>
                             ))
                         }
