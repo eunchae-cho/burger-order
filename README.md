@@ -9,6 +9,7 @@
   
 ### 🌎 Environment
 - Mac
+- Window
 - IntelliJ IDE
 - WebStorm IDE
   
