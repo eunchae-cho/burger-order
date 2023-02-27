@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/order")
 class OrderController(
-    private val burgerService: BurgerService,
-    private val sequenceService: SequenceService
 ) {
 
 }
