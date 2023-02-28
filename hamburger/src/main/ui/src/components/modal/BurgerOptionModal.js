@@ -8,13 +8,16 @@ import {isEmpty, isNotEmpty} from "../../utils/ObjectUtils";
 const BurgerOptionModal = ({ item }) => {
     const [open, setOpen] = useState(false);
     const [ingredients, setIngredients] = useState([]);
+    const [others, setOthers] = useState([]);
     const [addOptions, setAddOptions] = useState([]);
     const [exceptOptions, setExceptOptions] = useState([]);
+    const [otherOptions, setOtherOptions] = useState([]);
     const [any, forceUpdate] = useReducer(num => num + 1, 0);
 
     useEffect(() => {
         if (open) {
             setIngredients(item.ingredient);
+            setOthers(item.others);
         }
     }, [open])
 
@@ -75,11 +78,11 @@ const BurgerOptionModal = ({ item }) => {
      }
 
      // 제외 옵션 클릭 시
-     const handleCheckExcept = (e, ingredient ) => {
+     const handleCheckExcept = (ingredient ) => {
          let option = exceptOptions.filter((i) => i.id === ingredient.id)[0];
 
          // 제외할 시
-         if (option == undefined) {
+         if (option === undefined) {
              option = {
                  id: ingredient.id,
                  parentId: ingredient.parentId,
@@ -88,10 +91,26 @@ const BurgerOptionModal = ({ item }) => {
 
              setExceptOptions([...exceptOptions, option]);
          } else {
-             console.log(exceptOptions.filter((i) => i.id !== ingredient.id));
-             setExceptOptions([...exceptOptions.filter((i) => i.id !== ingredient.id), option]);
+             setExceptOptions(exceptOptions.filter((i) => i.id !== ingredient.id));
          }
      }
+
+     // 기타 옵션 클릭 시
+    const handleCheckOther = (other) => {
+       let option = otherOptions.filter((i) => i.id === other.id);
+
+       if (option === undefined || option.length == 0) {
+           option = {
+               id: other.id,
+               parentId: other.id,
+               name: other.name
+           }
+
+           setOtherOptions([...otherOptions, option]);
+       } else {
+           setOtherOptions(otherOptions.filter((i) => i.id !== other.id));
+       }
+    }
 
     return (
         <Modal
@@ -122,7 +141,7 @@ const BurgerOptionModal = ({ item }) => {
                         <Table.Body>
                             {
                                 ingredients.map((ingredient) => (
-                                    ingredient.addOption &&
+                                    ingredient.addable &&
                                     <Table.Row>
                                         <Table.Cell width={4}>{ingredient.name}</Table.Cell>
                                         <Table.Cell textAlign='right'>
@@ -145,13 +164,13 @@ const BurgerOptionModal = ({ item }) => {
                         <Table.Body>
                             {
                                 ingredients.map((ingredient) => (
-                                    ingredient.exceptOption &&
+                                    ingredient.exceptable &&
                                     <Table.Row>
                                         <Table.Cell width={4} warning>{ingredient.name}</Table.Cell>
                                         <Table.Cell textAlign='right'>
                                             <Checkbox
                                                 defaultChecked={false}
-                                                onClick={(e) => handleCheckExcept(e, ingredient)}
+                                                onClick={() => handleCheckExcept(ingredient)}
                                             />
                                         </Table.Cell>
                                     </Table.Row>
@@ -166,14 +185,19 @@ const BurgerOptionModal = ({ item }) => {
 
                     <Table definition>
                         <Table.Body>
-                                <Table.Row>
-                                    <Table.Cell width={4}>소스많이</Table.Cell>
-                                    <Table.Cell textAlign='right'>
-                                        <Checkbox
-                                            defaultChecked={false}
-                                        />
-                                    </Table.Cell>
-                                </Table.Row>
+                            {
+                              others.map((other) => (
+                                  <Table.Row>
+                                      <Table.Cell width={4}>{other.name}</Table.Cell>
+                                      <Table.Cell textAlign='right'>
+                                          <Checkbox
+                                              defaultChecked={false}
+                                              onClick={() => handleCheckOther(other)}
+                                          />
+                                      </Table.Cell>
+                                  </Table.Row>
+                              ))
+                            }
                         </Table.Body>
                     </Table>
 
@@ -190,6 +214,13 @@ const BurgerOptionModal = ({ item }) => {
                             exceptOptions.map((item) => (
                                 <div style={{ fontSize: 'small' }}>
                                     {item.name} 제외
+                                </div>
+                            ))
+                        }
+                        {
+                            otherOptions.map((item) => (
+                                <div style={{ fontSize: 'small' }}>
+                                    {item.name}
                                 </div>
                             ))
                         }
