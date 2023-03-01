@@ -12,6 +12,7 @@
 - Window
 - IntelliJ IDE
 - WebStorm IDE
+- MongoDB Compass
   
 ### 🎮 Skills
 - Kotlin
