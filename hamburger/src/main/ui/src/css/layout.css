@@ -50,10 +50,6 @@
     width: 100%;
 }
 
-#segment-fortune {
-    width: 100%;
-}
-
 #divider-or:before {
     border: 1px solid;
 }
@@ -143,4 +139,17 @@
 
 #menu-header-modal {
     font-family: yangJin;
+}
+
+.fortune-title {
+    align-self: center;
+    font-size: x-large;
+}
+
+#fortune-segment {
+    width: 16%;
+    border: 3px solid;
+    border-radius: 100px;
+    background: none;
+    margin: 0 auto;
 }

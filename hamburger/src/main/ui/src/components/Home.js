@@ -4,6 +4,7 @@ import TakeAwayImg from '../assets/icons/take-away.png'
 import {useState} from "react";
 import { useNavigate } from 'react-router-dom';
 import {useType} from "../utils/typeHandler/useType";
+import FortuneCookie from  "../assets/icons/fortune-cookie.png";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -88,8 +89,18 @@ const Home = () => {
                     </Segment>
                 </Grid.Row>
                 <Grid.Row>
-                    <Segment id='segment-fortune'>
-                        {/*<Image src='/images/wireframe/paragraph.png' />*/}
+                    <Segment id='fortune-segment'>
+                    <Grid columns={2} stackable textAlign='center'>
+                        <Grid.Row>
+                                <div className='fortune-title'>
+                                    <p>행운의<br/></p>
+                                     포춘쿠키 뽑기!
+                                </div>
+                        </Grid.Row>
+                        <Grid.Row style={{ paddingTop: 0 }}>
+                            <Image size='tiny' src={FortuneCookie} />
+                        </Grid.Row>
+                    </Grid>
                     </Segment>
                 </Grid.Row>
             </Grid>
