@@ -47,43 +47,53 @@ const Home = () => {
             {/*    어서오세요! :)*/}
             {/*</Message>*/}
 
-            <Segment placeholder id='segment-choose'>
-                <Grid columns={2} stackable textAlign='center'>
-                    <Divider id='divider-or' vertical>Or</Divider>
+            <Grid reversed='vertically'>
+                <Grid.Row>
+                    <Segment placeholder id='segment-choose'>
+                        <Grid columns={2} stackable textAlign='center'>
+                            <Divider id='divider-or' vertical>Or</Divider>
 
-                    <Grid.Row verticalAlign='middle'>
-                        <Grid.Column
-                            className='grid-for-here'
-                            onMouseEnter={handleForHere}
-                            onClick={clickForHere}
-                        >
-                            <Transition
-                                animation={animation}
-                                duration={duration}
-                                visible={visible}
-                            >
-                                <Image centered size='small' src={EatingImg} />
-                            </Transition>
-                            <div className='eating-type'> 매장식사 </div>
-                        </Grid.Column>
+                            <Grid.Row verticalAlign='middle'>
+                                <Grid.Column
+                                    className='grid-for-here'
+                                    onMouseEnter={handleForHere}
+                                    onClick={clickForHere}
+                                >
+                                    <Transition
+                                        animation={animation}
+                                        duration={duration}
+                                        visible={visible}
+                                    >
+                                        <Image centered size='small' src={EatingImg} />
+                                    </Transition>
+                                    <div className='eating-type'> 매장식사 </div>
+                                </Grid.Column>
 
-                        <Grid.Column
-                            className='grid-for-here'
-                            onMouseEnter={handleTakeAway}
-                            onClick={clickTakeAway}
-                        >
-                            <Transition
-                                animation={animationTwo}
-                                duration={durationTwo}
-                                visible={visibleTwo}
-                            >
-                                <Image centered size='small' src={TakeAwayImg} />
-                            </Transition>
-                            <div className='eating-type'> 포장하기 </div>
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
-            </Segment>
+                                <Grid.Column
+                                    className='grid-for-here'
+                                    onMouseEnter={handleTakeAway}
+                                    onClick={clickTakeAway}
+                                >
+                                    <Transition
+                                        animation={animationTwo}
+                                        duration={durationTwo}
+                                        visible={visibleTwo}
+                                    >
+                                        <Image centered size='small' src={TakeAwayImg} />
+                                    </Transition>
+                                    <div className='eating-type'> 포장하기 </div>
+                                </Grid.Column>
+                            </Grid.Row>
+                        </Grid>
+                    </Segment>
+                </Grid.Row>
+                <Grid.Row>
+                    <Segment id='segment-fortune'>
+                        {/*<Image src='/images/wireframe/paragraph.png' />*/}
+                    </Segment>
+                </Grid.Row>
+            </Grid>
+
         </div>
     );
 }
