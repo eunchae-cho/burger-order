@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {sidebarType} from "../utils/typeHandler/sidebarType";
 import {menuType} from "../utils/typeHandler/menuType";
 import TabPane from "./tabPane/TabPane";
-import {getAllBurgers, getAllDrinks, getAllSides} from "../services/menu";
+import {getAllBurgers, getAllDrinks, getAllSides} from "../store/menu";
 
 const MAIN_URL = '/';
 
