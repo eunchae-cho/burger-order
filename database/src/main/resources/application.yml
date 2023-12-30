@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  level:
+    # hibernate가 남기는 모든 로그의 debug 설정
+    org.hibernate.SQL: debug
+    # 실제 들어가는 파라미터 값 찍어주는 설정
+    org.hibernate.type: trace
