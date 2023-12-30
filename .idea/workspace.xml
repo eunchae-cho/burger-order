@@ -5,115 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bef8aa33-a5a8-4412-96f4-22d6e528b970" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apis/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/order-api/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/HamburgerApplication.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/common/entity/DatabaseSequence.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/common/entity/Menu.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/common/enums/EnumModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/common/enums/ErrorCode.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/common/response/ApiResponse.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/config/MvcConfig.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/controller/init/InitController.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/controller/menu/MenuController.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/controller/order/OrderController.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/controller/web/WebController.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/listener/BurgerModelListener.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/model/Burger.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/model/Drink.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/model/Ingredient.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/model/Option.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/model/Side.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/repository/BurgerRepository.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/repository/DrinkRepository.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/repository/SideRepository.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/service/BurgerService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/service/DrinkService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/service/SequenceService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/kotlin/com/ec/hbg/service/SideService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/resources/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/public/burger.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/fonts/BodoniFLF-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/fonts/BodoniFLF-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/fonts/BodoniFLF-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/fonts/BodoniFLF-Roman.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/fonts/ButtonHilightFLF.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/fonts/ButtonPlainFLF.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/fonts/yangJin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/icons/burger.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/icons/eating.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/icons/fortune-cookie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/icons/healthy-food.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/icons/take-away.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/images/cheese_burger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/images/cocaCola.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/images/cocaColaZero.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/images/double_burger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/images/french_fries.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/images/korea_beef_burger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/images/orange_juice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/images/set_menu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/images/signiture_burger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/images/sprite.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/images/sweetpotato_fries.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/assets/images/white_frame.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/components/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/components/Order.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/components/modal/AddMenuModal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/components/modal/BurgerOptionModal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/components/modal/OtherOptionModal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/components/section/Footer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/components/section/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/components/section/Layout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/components/sidebar/HorizontalSidebar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/components/tabPane/TabPane.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/css/font.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/css/layout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/css/override.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/mock/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/pages/main/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/pages/ordering/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/store/home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/store/menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/store/sidebar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/utils/ObjectUtils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/utils/axios.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/utils/reducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/utils/typeHandler/menuType.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/utils/typeHandler/optionType.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/utils/typeHandler/sidebarType.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/src/utils/typeHandler/useType.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/main/ui/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hamburger/src/test/kotlin/com/ec/hbg/HamburgerApplicationTests.kt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.6/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/order-api/build/libs/order-api-plain.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/order-api/build/libs/order-api.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/order-api/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/order-api/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/apis/order-api/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/order-api/build/resolvedMainClassName" beforeDir="false" afterPath="$PROJECT_DIR$/apis/order-api/build/resolvedMainClassName" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/order-api/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apis/order-api/build/resources/main/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/order-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apis/order-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +77,9 @@
         <task path="$PROJECT_DIR$/api">
           <activation />
         </task>
+        <task path="~/eunchae-git/hamburger-order/apis/order-api">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -195,6 +111,14 @@
                 <item name="apis" type="2d1252cf:ModuleNode" />
                 <item name="order-api" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="hamburger-order" type="f1a62948:ProjectNode" />
+                <item name="apis" type="2d1252cf:ModuleNode" />
+                <item name="order-api" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
@@ -211,12 +135,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2aFAmvQSOMSyvTgVuSpnz03CG0Q" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -229,10 +157,10 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "spring.configuration.checksum": "ed3c9c8a22d92d3c9958aefd096185a9",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.20253165",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.excludes",
+    "spring.configuration.checksum": "9bab96a846ede4196597f379116d9244",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -252,13 +180,42 @@
       <recent name="$PROJECT_DIR$/common/src/main/kotlin/com.ec.common" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.hamburger-order:apis:order-api [build]">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.hamburger-order:apis:order-api [bootRun]">
+    <configuration name="hamburger-order [apis:order-api:bootRun]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="apis:order-api:bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="hamburger-order:api [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/api" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -275,12 +232,34 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="hamburger-order:apis [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="~/eunchae-git/hamburger-order/apis/order-api" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="hamburger-order:apis:order-api [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/apis/order-api" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -341,56 +320,21 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="hamburger-order:order-api [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/order-api" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="demo.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HamburgerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="hamburger-order.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ec.hbg.HamburgerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="order.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.order.OrderApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Gradle.hamburger-order [apis:order-api:bootRun]" />
+      <item itemvalue="Gradle.hamburger-order:apis [bootRun]" />
+      <item itemvalue="Gradle.hamburger-order:api [clean]" />
+      <item itemvalue="Gradle.hamburger-order:apis:order-api [bootRun]" />
+      <item itemvalue="Gradle.hamburger-order:apis:order-api [build]" />
+      <item itemvalue="Gradle.hamburger-order:apis:order-api [clean]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.hamburger-order:apis:order-api [bootRun]" />
         <item itemvalue="Gradle.hamburger-order:apis:order-api [build]" />
         <item itemvalue="Gradle.hamburger-order:apis:order-api [clean]" />
+        <item itemvalue="Gradle.hamburger-order:apis [bootRun]" />
         <item itemvalue="Gradle.hamburger-order:api [clean]" />
-        <item itemvalue="Gradle.hamburger-order:order-api [build]" />
-        <item itemvalue="Gradle.hamburger-order:apis:order-api [bootRun]" />
       </list>
     </recent_temporary>
   </component>
@@ -405,11 +349,18 @@
       <workItem from="1703904116410" duration="9000" />
       <workItem from="1703904164100" duration="3726000" />
       <workItem from="1703909045955" duration="6939000" />
-      <workItem from="1703919262430" duration="4797000" />
+      <workItem from="1703919262430" duration="5719000" />
+      <workItem from="1703936399453" duration="31000" />
+      <workItem from="1703936434445" duration="37000" />
+      <workItem from="1703936479920" duration="600000" />
+      <workItem from="1703937089634" duration="3198000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

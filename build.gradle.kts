@@ -3,19 +3,19 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "3.2.1"
 	id("io.spring.dependency-management") version "1.1.4"
-	kotlin("jvm") version "1.9.21"
-	kotlin("plugin.spring") version "1.9.21"
-	kotlin("plugin.jpa") version "1.9.21"
+	kotlin("jvm") version "1.7.21"
+	kotlin("plugin.spring") version "1.7.21"
+	kotlin("plugin.jpa") version "1.7.21"
 }
+
+group = "com.ec"
+version = "0.0.1-SNAPSHOT"
 
 java {
 	sourceCompatibility = JavaVersion.VERSION_17
 }
 
 allprojects {
-	group = "com.ec"
-	version = "0.0.1-SNAPSHOT"
-
 	repositories {
 		mavenCentral()
 	}
@@ -25,10 +25,6 @@ allprojects {
 			freeCompilerArgs += "-Xjsr305=strict"
 			jvmTarget = "17"
 		}
-	}
-
-	tasks.withType<Test> {
-		useJUnitPlatform()
 	}
 }
 
@@ -51,5 +47,9 @@ subprojects {
 //		implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 //		testImplementation("org.springframework.boot:spring-boot-starter-test")
 //		testImplementation("io.projectreactor:reactor-test")
+	}
+
+	tasks.withType<Test> {
+		useJUnitPlatform()
 	}
 }

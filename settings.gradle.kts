@@ -10,4 +10,5 @@ rootProject.name = "hamburger-order"
 
 include("common")
 include("database")
+include("ui")
 include(":apis:order-api")
