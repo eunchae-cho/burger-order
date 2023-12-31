@@ -4,11 +4,11 @@ import com.ec.common.enums.MenuType
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "menu")
+@Table(name = "ec_menu")
 data class MenuEntity(
     @Id
     @GeneratedValue
-    val id: Long,
+    val id: Long? = null,
     val name: String,
     @Enumerated(EnumType.STRING)
     val type: MenuType,

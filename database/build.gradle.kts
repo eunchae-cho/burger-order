@@ -3,5 +3,5 @@ description = "database"
 dependencies {
     api(project(":common"))
 
-    implementation("org.postgresql:postgresql")
+    runtimeOnly("com.h2database:h2")
 }
