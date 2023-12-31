@@ -4,7 +4,8 @@ import com.ec.common.enums.FoodType
 import jakarta.persistence.*
 
 @Entity
-data class Menu(
+@Table(name = "menu")
+data class MenuEntity(
     @Id
     @GeneratedValue
     val id: Long,

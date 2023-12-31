@@ -1,4 +1,4 @@
-import axios from 'ui/src/utils/axios';
+import axios from 'src/ui/src/utils/axios';
 
 const BASE_URL = 'http://localhost:8080'
 

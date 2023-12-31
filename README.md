@@ -15,7 +15,7 @@
 - WebStorm IDE
   
 ### 🎮 Skills
-- Kotlin 1.7.21
+- Kotlin 1.9.21
 - Spring Boot 3.2.1
 - JPA
 - Gradle 8.1.1
