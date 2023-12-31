@@ -1,5 +1,5 @@
 package com.ec.common.enums
 
-enum class FoodType {
-    BURGER, DRINK, SIDE
+enum class MenuType {
+    BURGER, DRINK, SIDE, SET
 }

@@ -1,6 +1,6 @@
 package com.ec.database.entity
 
-import com.ec.common.enums.FoodType
+import com.ec.common.enums.MenuType
 import jakarta.persistence.*
 
 @Entity
@@ -11,6 +11,6 @@ data class MenuEntity(
     val id: Long,
     val name: String,
     @Enumerated(EnumType.STRING)
-    val type: FoodType,
+    val type: MenuType,
     val description: String? = null
 )
