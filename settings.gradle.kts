@@ -6,7 +6,7 @@ pluginManagement {
 	}
 }
 
-rootProject.name = "hamburger-order"
+rootProject.name = "burger-order"
 
 include("common")
 include("database")
