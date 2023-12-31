@@ -1,6 +1,6 @@
 description = "order-api"
 
 dependencies {
-    api(project(":common"))
+    implementation(project(":common"))
     api(project(":database"))
 }
