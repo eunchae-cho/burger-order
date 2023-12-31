@@ -26,30 +26,38 @@ allprojects {
 			jvmTarget = "17"
 		}
 	}
+
+	tasks.withType<Test> {
+		useJUnitPlatform()
+	}
 }
 
 subprojects {
 
 	apply {
 		plugin("java")
+		plugin("kotlin")
+		plugin("kotlin-spring")
+		plugin("kotlin-jpa")
 		plugin("org.springframework.boot")
 		plugin("io.spring.dependency-management")
+		plugin("org.jetbrains.kotlin.plugin.spring")
 	}
 
 	dependencies {
 		developmentOnly("org.springframework.boot:spring-boot-devtools")
 		implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 		implementation("org.springframework.boot:spring-boot-starter-webflux")
+
+		// Kotlin
 		implementation("org.jetbrains.kotlin:kotlin-reflect")
-//		implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-//		implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
-//		implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+		implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+		testImplementation("org.springframework.boot:spring-boot-starter-test")
 //		implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-//		testImplementation("org.springframework.boot:spring-boot-starter-test")
+//		implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
+
+//		implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 //		testImplementation("io.projectreactor:reactor-test")
 	}
 
-	tasks.withType<Test> {
-		useJUnitPlatform()
-	}
 }
