@@ -1,4 +1,4 @@
-# hamburger-order
+# hamburger-order 2.0
 햄버거 주문 App을 만들어 보자!
 
 ```
@@ -9,21 +9,18 @@
   
 ### 🌎 Environment
 - Mac
-- Window
 
 ### 🛠 Tools
 - IntelliJ IDE
 - WebStorm IDE
-- MongoDB Compass
   
 ### 🎮 Skills
-- Kotlin
+- Kotlin 1.7.21
+- Spring Boot 3.2.1
+- JPA
+- Gradle 8.1.1
+- Node
 - React
-- Spring Boot v2.7.8
-- Node v19.4.0
-- yarn v1.22.19
-- MongoDB
-- Gradle
+- Yarn
   
-### 🎨 UI 
-- Semantic UI React
+

@@ -47,6 +47,7 @@ subprojects {
 	dependencies {
 		developmentOnly("org.springframework.boot:spring-boot-devtools")
 		implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+		implementation("org.springframework.boot:spring-boot-starter-web")
 		implementation("org.springframework.boot:spring-boot-starter-webflux")
 
 		// Kotlin
@@ -55,7 +56,6 @@ subprojects {
 		testImplementation("org.springframework.boot:spring-boot-starter-test")
 //		implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 //		implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
-
 //		implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 //		testImplementation("io.projectreactor:reactor-test")
 	}

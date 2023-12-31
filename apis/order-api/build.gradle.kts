@@ -1,8 +1,6 @@
-//
-//springBoot {
-//    mainClass.set("com.ec.order.Application")
-//}
+description = "order-api"
 
 dependencies {
-    implementation(project(":common"))
+    api(project(":common"))
+    api(project(":database"))
 }
