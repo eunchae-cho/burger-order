@@ -11,3 +11,4 @@ rootProject.name = "burger-order"
 include("common")
 include("database")
 include("app")
+include("ui")

@@ -1,4 +1,4 @@
-# hamburger-order 2.0
+# burger-order 2.0
 햄버거 주문 App을 만들어 보자!
 
 ```
@@ -19,6 +19,7 @@
 - Spring Boot 3.2.1
 - JPA
 - Gradle 8.1.1
+- H2 Database
 - Node
 - React
 - Yarn
