@@ -1,0 +1,155 @@
+.header {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    font-size: x-large;
+}
+
+.grid-header {
+    justify-content: space-between;
+}
+
+.grid-header-col {
+    align-self: center;
+}
+
+.grid-header-col-2 {
+    align-self: center;
+    color: orangered;
+    /*margin-right: auto;*/
+}
+
+#cart-num {
+    font-weight: bold;
+    background: white;
+    border-radius: 100%;
+    box-shadow: none;
+    margin: auto;
+    margin-bottom: 3px;
+    padding: 6px;
+    padding-bottom: 1px;
+    width: 28px;
+}
+
+.home {
+    width: 80%;
+    margin: auto;
+    margin-block: 50px;
+}
+
+#home-msg {
+    margin-bottom: 40px;
+    background: #f7f4d9;
+    color: #a333c8;
+    box-shadow: 0 0 0 2px #a333c8 inset, 0 0 0 0 transparent;
+}
+
+#segment-choose {
+    border: 3px solid;
+    width: 100%;
+}
+
+#divider-or:before {
+    border: 1px solid;
+}
+
+#divider-or:after {
+    border: 1px solid;
+}
+
+.grid-for-here:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.eating-type {
+    text-align: center;
+    padding-top: 20px;
+    font-size: x-large;
+}
+
+.btn-back-div {
+    text-align: left;
+}
+
+#btn-back {
+    background: none;
+    font-family: yangJin;
+    color: black;
+}
+
+#btn-back:hover {
+    opacity: 0.7;
+}
+
+.grid-cart-icon:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#grid-sidebar-col {
+    text-align: left;
+    color: lightgrey;
+}
+
+#grid-sidebar-col:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#horizontal-sidebar{
+    width: 360px;
+    padding: 10px;
+    background: rgb(0 0 0 / 75%);
+}
+
+.menu-title {
+    font-size: x-large;
+    padding-block: 10px;
+}
+
+#grid-menu-row {
+    padding-block: 2rem;
+}
+
+#grid-menu-col {
+    margin-block: 20px;
+    text-align: -webkit-center;
+}
+
+.menu-plus-icon:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.card-price {
+    text-align: right;
+}
+
+.btn-cart {
+    text-align: right;
+    margin-top: 12px;
+}
+
+.dimmer-menu:hover {
+    filter: brightness(30%);
+    cursor: pointer;
+}
+
+#menu-header-modal {
+    font-family: yangJin;
+}
+
+.fortune-title {
+    align-self: center;
+    font-size: x-large;
+}
+
+#fortune-segment {
+    width: 16%;
+    border: 3px solid;
+    border-radius: 100px;
+    background: none;
+    margin: 0 auto;
+}
