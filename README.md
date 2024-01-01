@@ -38,6 +38,6 @@
 ## How To Start
 ```
 1. app에서 백엔드 서버 실행 (http://localhost:8080)
-2. ui에서 프론트 서버 실행 (http://localhost:3000)
 
+2. ui에서 프론트 서버 실행 (http://localhost:3000)
 ```
