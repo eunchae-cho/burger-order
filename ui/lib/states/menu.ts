@@ -7,7 +7,9 @@ export interface Menu {
     id: number
     name: string
     type: string
-    description: string
+    description: string,
+    price: number,
+    imageUrl: string
 }
 
 export const menuListState = atom<Menu[]>({

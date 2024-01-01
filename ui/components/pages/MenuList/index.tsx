@@ -24,12 +24,17 @@ const MenuList = () => {
         <div className="grid grid-cols-3 gap-10">
             {selectedMenus.map(item => (
                 <div key={uuid()} className="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                    <div className="card-body">
-                        <h2 className="card-title">{item.name}</h2>
-                        <p>{item.description}</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">담기</button>
+                    <figure><img src={item.imageUrl} alt="Images" /></figure>
+                    <div className="card-body justify-between">
+                        <article className="prose">
+                            <h2>{item.name}</h2>
+                            <p>{item.description}</p>
+                        </article>
+                        <div className="flex gap-2 justify-between">
+                            <p className="self-center">{item.price} 원</p>
+                            <div className="card-actions justify-end">
+                                <button className="btn btn-primary">담기</button>
+                            </div>
                         </div>
                     </div>
                 </div>
