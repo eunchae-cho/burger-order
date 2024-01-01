@@ -1,5 +1,5 @@
 import MenuList from "@/components/pages/MenuList";
-import MenuTab from "@/components/tab/MenuTab";
+import MenuTab from "@/components/common/MenuTab";
 
 export default function Home() {
   return (
