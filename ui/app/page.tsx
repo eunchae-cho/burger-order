@@ -1,8 +1,11 @@
+import MenuList from "@/components/pages/MenuList";
+import MenuTab from "@/components/tab/MenuTab";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Home
+    <main className="p-16">
+        <MenuTab />
+        <MenuList />
     </main>
   )
 }

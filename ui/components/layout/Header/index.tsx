@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 w-full border border-b-base-300">
             <div className="flex-1">
                 <a className="btn btn-ghost text-xl">Oh Burger</a>
             </div>
