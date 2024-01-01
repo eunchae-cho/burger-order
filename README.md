@@ -32,6 +32,7 @@
 
 ## Sample
 <img width="1362" alt="스크린샷 2024-01-01 14 23 49" src="https://github.com/eunchae-cho/burger-order/assets/68311262/aa3c7e2f-1d97-4cdd-bc39-5f42be09512f">
+<img width="1360" alt="스크린샷 2024-01-01 14 24 07" src="https://github.com/eunchae-cho/burger-order/assets/68311262/47c50276-c7c0-44c4-bb52-8b6d0af276bb">
 
 
 ## How To Start
