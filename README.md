@@ -11,9 +11,7 @@
 - 기능별 멀티 모듈 구성 (app, common, database, ui)
 - 서버와 클라이언트 분리
 ```
-  
-## 🌎 Environment
-- Mac
+
 
 ## 🛠 Tools
 - IntelliJ IDE
